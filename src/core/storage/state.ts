@@ -74,6 +74,7 @@ export async function getAllExtensionState(context: vscode.ExtensionContext) {
 		openAiModelInfo,
 		ollamaModelId,
 		ollamaBaseUrl,
+		ollamaTimeout,
 		ollamaApiOptionsCtxNum,
 		lmStudioModelId,
 		lmStudioBaseUrl,
@@ -144,6 +145,7 @@ export async function getAllExtensionState(context: vscode.ExtensionContext) {
 		getGlobalState(context, "openAiModelInfo") as Promise<ModelInfo | undefined>,
 		getGlobalState(context, "ollamaModelId") as Promise<string | undefined>,
 		getGlobalState(context, "ollamaBaseUrl") as Promise<string | undefined>,
+		getGlobalState(context, "ollamaTimeout") as Promise<string | undefined>,
 		getGlobalState(context, "ollamaApiOptionsCtxNum") as Promise<string | undefined>,
 		getGlobalState(context, "lmStudioModelId") as Promise<string | undefined>,
 		getGlobalState(context, "lmStudioBaseUrl") as Promise<string | undefined>,
@@ -253,6 +255,7 @@ export async function getAllExtensionState(context: vscode.ExtensionContext) {
 			openAiModelInfo,
 			ollamaModelId,
 			ollamaBaseUrl,
+			ollamaTimeout,
 			ollamaApiOptionsCtxNum,
 			lmStudioModelId,
 			lmStudioBaseUrl,
@@ -329,6 +332,7 @@ export async function updateApiConfiguration(context: vscode.ExtensionContext, a
 		openAiModelInfo,
 		ollamaModelId,
 		ollamaBaseUrl,
+		ollamaTimeout,
 		ollamaApiOptionsCtxNum,
 		lmStudioModelId,
 		lmStudioBaseUrl,
@@ -384,6 +388,7 @@ export async function updateApiConfiguration(context: vscode.ExtensionContext, a
 	await updateGlobalState(context, "openAiModelInfo", openAiModelInfo)
 	await updateGlobalState(context, "ollamaModelId", ollamaModelId)
 	await updateGlobalState(context, "ollamaBaseUrl", ollamaBaseUrl)
+	await updateGlobalState(context, "ollamaTimeout", ollamaTimeout)
 	await updateGlobalState(context, "ollamaApiOptionsCtxNum", ollamaApiOptionsCtxNum)
 	await updateGlobalState(context, "lmStudioModelId", lmStudioModelId)
 	await updateGlobalState(context, "lmStudioBaseUrl", lmStudioBaseUrl)

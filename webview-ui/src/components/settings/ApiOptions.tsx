@@ -1308,6 +1308,13 @@ const ApiOptions = ({ showModelOptions, apiErrorMessage, modelIdErrorMessage, is
 						<span style={{ fontWeight: 500 }}>Base URL (optional)</span>
 					</VSCodeTextField>
 					<VSCodeTextField
+						value={apiConfiguration?.ollamaTimeout || "30000"}
+						style={{ width: "100%" }}
+						onInput={handleInputChange("ollamaTimeout")}
+						placeholder={"e.g. 30000"}>
+						<span style={{ fontWeight: 500 }}>Timeout</span>
+					</VSCodeTextField>
+					<VSCodeTextField
 						value={apiConfiguration?.ollamaModelId || ""}
 						style={{ width: "100%" }}
 						onInput={handleInputChange("ollamaModelId")}

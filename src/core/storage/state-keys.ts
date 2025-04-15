@@ -38,6 +38,7 @@ export type GlobalStateKey =
 	| "openAiModelInfo"
 	| "ollamaModelId"
 	| "ollamaBaseUrl"
+	| "ollamaTimeout"
 	| "ollamaApiOptionsCtxNum"
 	| "lmStudioModelId"
 	| "lmStudioBaseUrl"

@@ -54,6 +54,7 @@ export interface ApiHandlerOptions {
 	openAiModelInfo?: OpenAiCompatibleModelInfo
 	ollamaModelId?: string
 	ollamaBaseUrl?: string
+	ollamaTimeout?: string
 	ollamaApiOptionsCtxNum?: string
 	lmStudioModelId?: string
 	lmStudioBaseUrl?: string
